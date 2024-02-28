@@ -1,0 +1,9 @@
+Admin Privileges:
+Edit Posts
+Upgrade Users
+Delete Users
+Admin Page
+
+Users:
+View Posts
+Delete Account

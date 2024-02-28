@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogopedia - Login</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='/css/login.css')}}">
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <div id="notificationContainer" class="notification-container">{{message}}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+  <div class="container">
+    <h2>Blogopedia</h2>
+    <h4>Sign In</h4>
+    <form action="" method="post" novalidate>
+      {{ form.hidden_tag() }}
+      {{ form.email(size=32, placeholder='Email') }}<br>
+      {% for error in form.email.errors %}
+      <span style="color: red;">[{{ error }}]</span>
+      {% endfor %}
+      {{ form.password(size=32, placeholder='Password') }}<br>
+      {% for error in form.password.errors %}
+      <span style="color: red;">[{{ error }}]</span><br>
+      {% endfor %}
+      {{ form.remember_me() }} {{ form.remember_me.label }}
+      {{ form.submit() }}
+    </form>
+    <p><a class="oauth" href="{{ url_for('oauth2_authorize', provider='google') }}">
+      Login with Google
+    </a></p>
+    <p>New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>
+    <p>
+        Forgot Your Password?
+        <a href="{{ url_for('reset_password_request') }}">Click to Reset It</a>
+    </p>
+  </div>
+<script type="text/javascript" src="{{url_for('static', filename='/js/main.js')}}"></script>
+</body>
+</html>

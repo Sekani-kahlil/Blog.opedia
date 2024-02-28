@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='/css/index.css')}}">
+{% endblock %}
+
+{% block content %}
+    <div class="post-form">
+    <form id="blogPostForm">
+      <input type="text" id="postTitle" placeholder="Enter post title">
+      <input type="button" value="Create Post" onclick="openModal()">
+    </form>
+  </div>
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>New Blog Post</h2>
+      <form id="newPostForm" action="" method="post">
+        {{ form.hidden_tag() }}
+        {{ form.post_title(id="modalPostTitle", placeholder="Enter post title") }}<br>
+            {% for error in form.post_title.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        {{ form.post_content(id="modalPostContent", placeholder="Enter post content") }}<br>
+            {% for error in form.post_content.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        {{ form.submit() }}
+      </form>
+    </div>
+  </div>
+  <!-- End Modal -->
+  <div class="container-wrapper">
+    {% for post in posts %}
+        {% include '_post.html' %}
+    {% endfor %}
+    </div>
+    {% if next_url %}
+    <a href="{{ next_url }}" class="lpagination">< Older posts</a>
+    {% endif %}
+    {% if prev_url %}
+    <a href="{{ prev_url }}" class="rpagination">Newer posts ></a>
+    {% endif %}
+
+    <script type="text/javascript" src="{{url_for('static', filename='/js/main.js')}}"></script>
+{% endblock %}

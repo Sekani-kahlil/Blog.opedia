@@ -1,0 +1,84 @@
+* {
+      font-family: 'Poppins', sans-serif; /* Set font-family to Poppins */
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    header {
+      background-color: #ddd;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      color: #333;
+      font-weight: bold;
+      color: blue;
+    }
+    .topnav {
+      overflow: hidden;
+    }
+    .topnav a {
+      float: right;
+      display: block;
+      color: #333;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      border-radius: 30px;
+      margin-right: 10px;
+    }
+    .topnav a:hover {
+      background-color: #fff;
+      color: black;
+    }
+    .topnav a.active {
+      background-color: blue;
+      color: white;
+    }
+    @media screen and (max-width: 600px) {
+      .topnav {
+        float: none;
+        text-align: center;
+      }
+      .topnav a {
+        float: none;
+        display: inline-block;
+        margin-right: 0;
+      }
+      .logo {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+    .container{
+      background-color: #fefefe;
+      margin: 15% auto; /* 15% from the top and centered */
+      padding: 30px;
+      border: 1px solid blue;
+      width: 30%; /* Could be more or less, depending on screen size */
+      border-radius: 10px;
+      box-sizing: border-box;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .notification-container {
+      display: block;
+      min-width: 250px;
+      text-align: center;
+      position: fixed;
+      top:15px; /* Adjust as needed */
+      right: 20px; /* Adjust as needed */
+      background-color: #fff;
+      color: green;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }

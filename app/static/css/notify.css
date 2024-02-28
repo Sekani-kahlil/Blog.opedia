@@ -1,0 +1,61 @@
+* {
+      font-family: 'Poppins', sans-serif; /* Set font-family to Poppins */
+    }
+
+
+.container{
+      background-color: #fefefe;
+      margin: 8% auto; /* 15% from the top and centered */
+      padding: 30px;
+      border: 1px solid blue;
+      width: 30%; /* Could be more or less, depending on screen size */
+      border-radius: 10px;
+      box-sizing: border-box;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+input[type="email"], input[type="text"], input[type="password"]{
+      margin-top: 10px;
+      width: 100%;
+      padding: 10px;
+      margin-right: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+}
+input[type="email"], input[type="text"] {
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+}
+input:focus {
+      outline: none;
+      border: none;
+      border-radius: 0px;
+      border-bottom: 2px solid blue;
+}
+input[type="submit"] {
+      color: #fff;
+      background-color: blue;
+      padding: 15px;
+      border-radius: 10px;
+      border: none;
+      text-decoration: none;
+      margin-top: 10px;
+      width: 100%;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      color: #fff;
+}
+input[type="submit"]:focus {
+      background-color: darkblue;
+}
+.container p{
+      font-family: poppins;
+      font-size: medium;
+      margin-top: 40px;
+      text-align: center;
+      
+    }
+.container h1{
+      text-align: center;
+      color: blue;
+    }

@@ -1,0 +1,209 @@
+* {
+      font-family: 'Poppins', sans-serif; /* Set font-family to Poppins */
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    header {
+      background-color: #ddd;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      color: #333;
+      font-weight: bold;
+      color: blue;
+    }
+    .topnav {
+      overflow: hidden;
+    }
+    .topnav a {
+      float: right;
+      display: block;
+      color: #333;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      border-radius: 30px;
+      margin-right: 10px;
+    }
+    .topnav a:hover {
+      background-color: #fff;
+      color: black;
+    }
+    .topnav a.active {
+      background-color: blue;
+      color: white;
+    }
+    @media screen and (max-width: 600px) {
+      .topnav {
+        float: none;
+        text-align: center;
+      }
+      .topnav a {
+        float: none;
+        display: inline-block;
+        margin-right: 0;
+      }
+      .logo {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+    /* Adjustments for responsive containers */
+    .container-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 20px auto;
+      padding: 0 10px;
+    }
+    .container {
+      flex: 0 0 calc(33.33% - 20px);
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    @media screen and (max-width: 900px) {
+      .container {
+        flex: 0 0 calc(50% - 20px);
+      }
+    }
+    @media screen and (max-width: 600px) {
+      .container {
+        flex: 0 0 calc(100% - 20px);
+      }
+    }
+    /* Style for input element */
+    .post-form {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-sizing: border-box;
+    }
+    .post-form input[type="text"] {
+      width: calc(95% - 100px);
+      padding: 10px;
+      margin-right: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    .post-form input[type="button"] {
+      padding: 10px 20px;
+      background-color: blue;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .post-form input[type="button"]:focus {
+      background-color: darkblue;
+    }
+    /* Modal styles */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 10% auto; /* 15% from the top and centered */
+      padding: 30px;
+      border: 1px solid #888;
+      width: 35%; /* Could be more or less, depending on screen size */
+      border-radius: 10px;
+    }
+    .modal-content h2{
+      color: blue;
+    }
+
+    /* Close Button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    /* Style for modal input fields */
+    .modal input[type="text"],
+    .modal textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    /* Style for modal submit button */
+    .modal input[type="submit"] {
+      background-color: blue;
+      margin-top: 10px;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      padding: 10px 20px;
+    }
+
+    .modal input[type="submit"]:focus {
+      background-color: darkblue;
+    }
+.lpagination{
+  text-align: left;
+  float: left;
+  margin-left: 10px;
+}
+.rpagination{
+  text-align: right;
+  float: right;
+  margin-right: 10px;
+}
+.lpagination, 
+.rpagination{
+  text-decoration: none;
+  background-color: #fff;
+  color: blue;
+  padding: 15px;
+  border-radius: 20px;
+}
+.lpagination:hover, 
+.rpagination:hover{
+  background-color: #ddd;
+
+.lpagination:focus, 
+.rpagination:focus{
+  background-color: blue;
+  color: white;
+}
